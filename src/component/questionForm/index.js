@@ -1,8 +1,10 @@
+/* eslint-disable default-case */
 import React, { Component } from 'react';
-import Question1 from './Question1';
-import Question2 from './Question2';
-import Question3 from './Question3';
-import Final from './Final';
+import '../styles.css';
+import Question1 from '../question1';
+import Question2 from '../question2';
+import Question3 from '../question3';
+import Final from '../final';
 
 export default class QuestionForm extends Component {
 state = {

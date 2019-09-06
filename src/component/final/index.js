@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import '../styles.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
-import api from '../services/api';
+import api from '../../services/api';
 import TextField from 'material-ui/TextField';
 import RaisedButton  from 'material-ui/RaisedButton';
 
@@ -42,13 +43,14 @@ export default class Final extends Component {
     return (
         <MuiThemeProvider>
             <React.Fragment>
-                <AppBar title="Final" />
+                <div className="container" >
                     {this.state.error ? <h1>Error ao Enviar solicitação</h1> : <h1>Enviado com sucesso!</h1>}
                     <RaisedButton 
                         label="Recomeçar"
                         primary={true}
                         onClick={this.continue}
                     />
+                </ div>    
             </React.Fragment>
         </MuiThemeProvider>    
     );
