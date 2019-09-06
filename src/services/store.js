@@ -1,0 +1,1 @@
+export const saveStorage = (token, value) => localStorage.setItem(token, value);
