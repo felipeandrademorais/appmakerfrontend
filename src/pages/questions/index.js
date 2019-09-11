@@ -1,5 +1,5 @@
 import React from 'react';
-import QuestionForm from '../component/questionForm';
+import QuestionForm from '../../component/questionForm';
 
 const pages = () => <QuestionForm />;
 

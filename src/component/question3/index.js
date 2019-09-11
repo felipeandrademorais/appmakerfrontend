@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import '../styles.css';
-import RaisedButton  from 'material-ui/RaisedButton';
+import Button  from '@material-ui/core/Button';
 import { saveStorage } from '../../services/store';
-
-// import { Container } from './styles';
+import { ReactComponent as Sad } from '../../assets/frown-regular.svg';
+import { ReactComponent as Normal } from '../../assets/meh-regular.svg';
+import { ReactComponent as Smile } from '../../assets/smile-regular.svg';
 
 export default class Question3 extends Component {
     continue = (value) => {
@@ -20,31 +20,34 @@ export default class Question3 extends Component {
             <React.Fragment>
                 <div className="container" >
                     <div className="containerText">
-                        <h1>Que tal contribuir com a sua opinião?</h1>
+                        <h1>Qual seu grau de satisfação?</h1>
                     </div>
                     
                     <div className="containerButton">
-                        <RaisedButton
+                        <Button
+                            className="botao" 
+                            style={{height: 120, width: 120 }}
+                            primary={true}
+                            onClick={(value) => this.continue("Feliz", value)}               
+                        >
+                            <Smile style={{margin:10, width:90, color: "#55efc4"}} />
+                        </Button>
+                        <Button
                             className="botao" 
                             style={{height: 120, width: 120}} 
-                            label="Triste"
                             primary={true}
-                            onClick={(value) => this.continue("Triste", value)}                   
-                        />
-                        <RaisedButton
+                            onClick={(value) => this.continue("Medio", value)}               
+                        >
+                            <Normal style={{margin:10, width:90, color: "#ffeaa7"}} />
+                        </Button>
+                        <Button
                             className="botao" 
                             style={{height: 120, width: 120}} 
-                            label="Medio"
                             primary={true}
-                            onClick={(value) => this.continue("Medio", value)}                       
-                        />
-                        <RaisedButton
-                            className="botao" 
-                            style={{height: 120, width: 120}} 
-                            label="Feliz"
-                            primary={true}
-                            onClick={(value) => this.continue("Feliz", value)}                   
-                        />
+                            onClick={(value) => this.continue("Triste", value)}               
+                        >
+                            <Sad style={{margin:10, width:90, color: "#ff7675"}} />
+                        </Button>
                     </ div>    
                 </ div>
             </React.Fragment>

@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import '../styles.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import api from '../../services/api';
-import TextField from 'material-ui/TextField';
 import RaisedButton  from 'material-ui/RaisedButton';
-
-// import { Container } from './styles';
 
 export default class Final extends Component {
     state ={

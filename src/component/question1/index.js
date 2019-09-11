@@ -4,15 +4,11 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton  from 'material-ui/RaisedButton';
 import { saveStorage } from '../../services/store';
 
-// import { Container } from './styles';
-
 export default class Question1 extends Component {
     continue = (value) => {
         saveStorage('question1',value);
         this.props.nextStep();
     }
-
-
 
   render() {
 

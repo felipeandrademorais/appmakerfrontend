@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import '../styles.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import AppBar from 'material-ui/AppBar';
 import RaisedButton  from 'material-ui/RaisedButton';
 import { saveStorage } from '../../services/store';
-
-// import { Container } from './styles';
 
 export default class Question2 extends Component {
     continue = (value) => {
