@@ -1,10 +1,10 @@
 /* eslint-disable default-case */
 import React, { Component } from 'react';
-import '../styles.css';
-import Question1 from '../question1';
-import Question2 from '../question2';
-import Question3 from '../question3';
-import Final from '../final';
+import './styles.css';
+import Page1 from './page1';
+import Page2 from './page2';
+import Page3 from './page3';
+import Send from './send';
 
 export default class QuestionForm extends Component {
 state = {
@@ -37,14 +37,14 @@ initStep = () =>{
     switch(step){
         case 1:
             return (
-                <Question1 
+                <Page1 
                     nextStep={this.nextStep}
                     handleChange={this.handleChange}
                 />
             )
         case 2:
             return (
-                <Question2 
+                <Page2 
                 nextStep={this.nextStep}
                 handleChange={this.handleChange}
                 printState={this.printState}
@@ -52,14 +52,14 @@ initStep = () =>{
             )
         case 3:
             return (
-                <Question3 
+                <Page3 
                  nextStep={this.nextStep}
                  handleChange={this.handleChange}
                 />
             )
         case 4: 
             return (
-                <Final 
+                <Send 
                  initStep={this.initStep}
                 />
             )

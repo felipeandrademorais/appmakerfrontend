@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import '../styles.css';
 import Button  from '@material-ui/core/Button';
-import { saveStorage } from '../../services/store';
-import { ReactComponent as Sad } from '../../assets/frown-regular.svg';
-import { ReactComponent as Normal } from '../../assets/meh-regular.svg';
-import { ReactComponent as Smile } from '../../assets/smile-regular.svg';
+import { saveStorage } from '../../../services/store';
+import { ReactComponent as Sad } from '../../../assets/frown-regular.svg';
+import { ReactComponent as Normal } from '../../../assets/meh-regular.svg';
+import { ReactComponent as Smile } from '../../../assets/smile-regular.svg';
 
 export default class Question3 extends Component {
     continue = (value) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import QuestionForm from '../../component/questionForm';
+import Questions from '../../component/Questions';
 
-const pages = () => <QuestionForm />;
+const pages = () => <Questions />;
 
 export default pages;

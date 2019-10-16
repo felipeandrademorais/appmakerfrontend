@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import api from '../../services/api';
+import api from '../../../services/api';
 import RaisedButton  from 'material-ui/RaisedButton';
 
 export default class Final extends Component {

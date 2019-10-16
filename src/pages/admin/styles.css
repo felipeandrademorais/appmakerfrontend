@@ -1,8 +1,0 @@
-.chart-container {
-  max-width: 690px;
-  margin-top: 60px;
-  padding: 3px;
-  display: flex;
-  flex-flow: row wrap;
-  border-radius: 12px;
-}

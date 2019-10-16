@@ -1,17 +1,37 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
 
-body {
+* {
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
   background-color: #ecf0f1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+input {
+  width: 220px;
+  border: 1px solid #e6ecf0;
+  height: 34px;
+  padding: 0 30px 0 12px;
+  border-radius: 6px;
+  color: #2c3e50;
+  font-size: 12px;
+}
+
+button {
+  height: 34px;
+  width: 100%;
+  background: #2ecc71;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
 }
