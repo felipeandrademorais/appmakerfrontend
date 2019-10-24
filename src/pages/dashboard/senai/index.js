@@ -29,7 +29,7 @@ export default class senai extends Component {
       this.setState({ data: docs, dataInfo, page});
       
     }catch(err){
-      console.log(err);
+      console.log("Um erro foi encontrado:" + err);
     }
   }
 
