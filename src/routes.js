@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import {isAuthenticated} from './services/auth';
 
-import Feiragera from './pages/feiragera';
 import Dashboard from './pages/dashboard';
 import Questions from './pages/questions';
 import Login from './pages/login';
@@ -23,7 +22,6 @@ const Routes = () => (
         <Switch>
           <Route exact path="/" component={Login} />
           <Route path="/questions" component={Questions} />
-          <Route path="/gera" component={Feiragera} />
 
           <PrivateRoute path="/dashboard" component={Dashboard} />
           <PrivateRoute path="/senai" component={Senai} />
