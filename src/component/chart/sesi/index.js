@@ -26,6 +26,7 @@ export default class chart extends Component {
 
   render() {
     return (
+      <>
       <div className="chart-container">
           <>
   
@@ -36,8 +37,19 @@ export default class chart extends Component {
           
           </>
       </div>
+
+      <div className="legend-chart">
+        <div id="row">
+          <div className="cube-legend" id="bar1"></div><span>Muito Feliz</span>
+          <div className="cube-legend" id="bar2"></div><span>Feliz</span>
+        </div>
+        <div id="row">
+          <div className="cube-legend" id="bar3"></div><span>Medio</span>
+          <div className="cube-legend" id="bar4"></div><span>Triste</span>
+        </div>
+      </div>
         
-     
+     </>
     );
   }
 }

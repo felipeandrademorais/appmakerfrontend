@@ -53,16 +53,27 @@ export default class chart extends Component {
 
   render() {
     return (
+      <>
       <div className="chart-container">
           <>
-            <div className="bar" id="bar1" style={{ height: this.state.dataChart[0]*this.state.data.length }}><span>{`${this.state.dataChart[0]}`}</span></div>
-            <div className="bar" id="bar2" style={{ height: this.state.dataChart[1]*this.state.data.length }}><span>{`${this.state.dataChart[1]}`}</span></div>
-            <div className="bar" id="bar3" style={{ height: this.state.dataChart[2]*this.state.data.length }}><span>{`${this.state.dataChart[2]}`}</span></div>
-            <div className="bar" id="bar4" style={{ height: this.state.dataChart[3]*this.state.data.length }}><span>{`${this.state.dataChart[3]}`}</span></div>
+            <div className="bar" id="bar1" style={{ height: this.state.dataChart[0] * this.state.data.length }}><span>{`${this.state.dataChart[0]}`}</span></div>
+            <div className="bar" id="bar2" style={{ height: this.state.dataChart[1] * this.state.data.length }}><span>{`${this.state.dataChart[1]}`}</span></div>
+            <div className="bar" id="bar3" style={{ height: this.state.dataChart[2] * this.state.data.length }}><span>{`${this.state.dataChart[2]}`}</span></div>
+            <div className="bar" id="bar4" style={{ height: this.state.dataChart[3] * this.state.data.length }}><span>{`${this.state.dataChart[3]}`}</span></div>
           </>
       </div>
-        
-     
+
+      <div className="legend-chart">
+        <div id="row">
+          <div className="cube-legend" id="bar1"></div><span>Muito Feliz</span>
+          <div className="cube-legend" id="bar2"></div><span>Feliz</span>
+        </div>
+        <div id="row">
+          <div className="cube-legend" id="bar3"></div><span>Medio</span>
+          <div className="cube-legend" id="bar4"></div><span>Triste</span>
+        </div>
+      </div>
+     </>
     );
   }
 }

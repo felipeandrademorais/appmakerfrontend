@@ -1,3 +1,9 @@
+.cube-legend {
+  width: 10px;
+  height: 10px;
+  margin: 0px 10px;
+}
+
 .chart-container {
   display: flex;
   align-items: flex-end;
@@ -28,15 +34,20 @@
   font-size: 12px;
 }
 
-.chart-container .bar#bar1 {
+#bar1 {
   background-color: #1abc9c;
 }
-.chart-container .bar#bar2 {
+#bar2 {
   background-color: #2ecc71;
 }
-.chart-container .bar#bar3 {
+#bar3 {
   background-color: #9b59b6;
 }
-.chart-container .bar#bar4 {
+#bar4 {
   background-color: #f39c12;
+}
+
+#row {
+  display: flex;
+  align-items: center;
 }

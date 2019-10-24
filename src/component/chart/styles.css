@@ -1,7 +1,14 @@
+.cube-legend {
+  width: 10px;
+  height: 10px;
+  margin: 0px 10px;
+}
+
 .chart-container {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
+  align-self: stretch;
 
   width: 400px;
   height: 200px;
@@ -9,6 +16,7 @@
   border-radius: 12px;
   padding: 12px 12px 2px 12px;
   margin: 20px;
+  overflow: hidden;
 }
 
 .chart-container .bar {
@@ -18,6 +26,7 @@
   margin-left: 10px;
   border: 2px solid #7f8c8d;
   cursor: pointer;
+  flex: 1;
 }
 
 .chart-container .bar:hover {
@@ -28,15 +37,20 @@
   font-size: 12px;
 }
 
-.chart-container .bar#bar1 {
+#bar1 {
   background-color: #1abc9c;
 }
-.chart-container .bar#bar2 {
+#bar2 {
   background-color: #2ecc71;
 }
-.chart-container .bar#bar3 {
+#bar3 {
   background-color: #9b59b6;
 }
-.chart-container .bar#bar4 {
+#bar4 {
   background-color: #f39c12;
+}
+
+#row {
+  display: flex;
+  align-items: center;
 }
