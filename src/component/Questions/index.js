@@ -4,6 +4,7 @@ import './styles.css';
 import Page1 from './page1';
 import Page2 from './page2';
 import Page3 from './page3';
+import Page4 from './page4';
 import Send from './send';
 
 export default class QuestionForm extends Component {
@@ -45,22 +46,29 @@ initStep = () =>{
         case 2:
             return (
                 <Page2 
-                nextStep={this.nextStep}
-                handleChange={this.handleChange}
-                printState={this.printState}
+                    nextStep={this.nextStep}
+                    handleChange={this.handleChange}
+                    printState={this.printState}
                 />
             )
         case 3:
             return (
                 <Page3 
-                 nextStep={this.nextStep}
-                 handleChange={this.handleChange}
+                    nextStep={this.nextStep}
+                    handleChange={this.handleChange}
                 />
             )
-        case 4: 
+        case 4:
+            return (
+                <Page4 
+                    nextStep={this.nextStep}
+                    handleChange={this.handleChange}
+                />
+            )
+        case 5: 
             return (
                 <Send 
-                 initStep={this.initStep}
+                    initStep={this.initStep}
                 />
             )
 

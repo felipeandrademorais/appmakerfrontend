@@ -1,0 +1,42 @@
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  width: 400px;
+  height: 200px;
+  border: 2px solid #7f8c8d;
+  border-radius: 12px;
+  padding: 12px 12px 2px 12px;
+  margin: 20px;
+}
+
+.chart-container .bar {
+  height: 100%;
+  width: 55px;
+  text-align: center;
+  margin-left: 10px;
+  border: 2px solid #7f8c8d;
+  cursor: pointer;
+}
+
+.chart-container .bar:hover {
+  opacity: 0.7;
+}
+
+.chart-container .bar span {
+  font-size: 12px;
+}
+
+.chart-container .bar#bar1 {
+  background-color: #1abc9c;
+}
+.chart-container .bar#bar2 {
+  background-color: #2ecc71;
+}
+.chart-container .bar#bar3 {
+  background-color: #9b59b6;
+}
+.chart-container .bar#bar4 {
+  background-color: #f39c12;
+}

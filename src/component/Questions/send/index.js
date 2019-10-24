@@ -9,19 +9,22 @@ export default class Final extends Component {
         question1: '',
         question2: '',
         question3: '',
+        question4: '',
         error: ''
     }
 
     async componentDidMount(){
         try{
-            const question1 = localStorage.getItem('question1');
-            const question2 = localStorage.getItem('question2');
-            const question3 = localStorage.getItem('question3');
+            const q1 = localStorage.getItem('question1');
+            const q2 = localStorage.getItem('question2');
+            const q3 = localStorage.getItem('question3');
+            const q4 = localStorage.getItem('question4');
+
+            let response = q1+","+q2+","+q3+","+q4; 
 
             await api.post("/answers", {
-                "response1": question1,
-                "response2": question2,
-                "response3": question3
+               "name":"Mundo Senai",
+                "response": response
               });
            
         } catch (err){
@@ -41,6 +44,7 @@ export default class Final extends Component {
             <React.Fragment>
                 <div className="container" >
                     {this.state.error ? <h1>Error ao Enviar solicitação</h1> : <h1>Enviado com sucesso!</h1>}
+                    <br />
                     <RaisedButton 
                         label="Recomeçar"
                         primary={true}

@@ -8,6 +8,7 @@ import Dashboard from './pages/dashboard';
 import Questions from './pages/questions';
 import Login from './pages/login';
 import Senai from './pages/dashboard/senai';
+import Sesi from './pages/dashboard/sesi';
 
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -26,6 +27,7 @@ const Routes = () => (
 
           <PrivateRoute path="/dashboard" component={Dashboard} />
           <PrivateRoute path="/senai" component={Senai} />
+          <PrivateRoute path="/sesi" component={Sesi} />
         </Switch>
      </BrowserRouter>
 );

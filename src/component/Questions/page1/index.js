@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import '../styles.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton  from 'material-ui/RaisedButton';
+import '../styles.css';
+import Button  from '@material-ui/core/Button';
 import { saveStorage } from '../../../services/store';
+import { ReactComponent as Sad } from '../../../assets/frown-regular.svg';
+import { ReactComponent as Normal } from '../../../assets/meh-regular.svg';
+import { ReactComponent as Smile } from '../../../assets/smile-regular.svg';
 
 export default class Question1 extends Component {
     continue = (value) => {
@@ -17,26 +20,36 @@ export default class Question1 extends Component {
             <React.Fragment>
                 <div className="container" >
                     <div className="containerText">
-                        <h1>Que tal contribuir com a sua opinião?</h1>
+                        <h1>Apresentação dos Projetos</h1>
                     </div>
                     
                     <div className="containerButton">
-                        <RaisedButton
-                            className="botao"
+                        <Button
+                            className="botao" 
+                            style={{height: 120, width: 120 }}
+                            primary={true}
+                            onClick={(value) => this.continue(10, value)}               
+                        >
+                            <Smile style={{margin:10, width:90, color: "#55efc4"}} />
+                        </Button>
+                        <Button
+                            className="botao" 
                             style={{height: 120, width: 120}} 
-                            label="EJA"
                             primary={true}
-                            onClick={(value) => this.continue("EJA", value)}              
-                        />
-                        <RaisedButton 
-                            style={{height: 120, width: 120}}
-                            className="botao"
-                            label="Maker"
+                            onClick={(value) => this.continue(6, value)}               
+                        >
+                            <Normal style={{margin:10, width:90, color: "#ffeaa7"}} />
+                        </Button>
+                        <Button
+                            className="botao" 
+                            style={{height: 120, width: 120}} 
                             primary={true}
-                            onClick={(value) => this.continue("MAKER", value)}                       
-                        />
-                    </div>
-                </div>  
+                            onClick={(value) => this.continue(2, value)}               
+                        >
+                            <Sad style={{margin:10, width:90, color: "#ff7675"}} />
+                        </Button>
+                    </ div>    
+                </ div>
             </React.Fragment>
         </MuiThemeProvider>    
     );

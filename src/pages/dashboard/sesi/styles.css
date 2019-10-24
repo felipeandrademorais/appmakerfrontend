@@ -1,0 +1,70 @@
+.sesi-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sesi-container h1 {
+  font-weight: normal;
+  padding: 10px;
+  margin: 10px;
+}
+
+.sesi-container table {
+  margin: 10px;
+  border-collapse: collapse;
+  overflow: auto;
+}
+
+.sesi-container table thead th {
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  color: #2c3e50;
+  border-bottom: 1px solid #2c3e50;
+}
+
+.sesi-container table tbody td {
+  padding: 10px;
+  text-align: center;
+}
+
+.sesi-container table tbody tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.sesi-container .content-sesi-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.sesi-container .content-sesi-container .table-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: initial;
+}
+
+.sesi-container .content-sesi-container .table-area .action {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sesi-container .content-sesi-container .table-area .action button {
+  padding: 5px;
+  margin: 10px;
+  width: 90px;
+}
+
+.sesi-container .content-sesi-container .sesi-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
