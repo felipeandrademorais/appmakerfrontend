@@ -19,7 +19,9 @@ export default class chart extends Component {
     try{
       const param = this.state.param;
       const response = await api.get('/answers', { params: { filter: param }});
-      this.setState({ data: response.data});
+      this.setState({ data: response.data.docs});
+      console.log(response.data.docs);
+
     }catch(err){
       console.log(err);
     }finally{
@@ -46,8 +48,7 @@ export default class chart extends Component {
         }
       }
     });
-
-    console.log(column);
+    
     this.setState({dataChart: column });
   }
 

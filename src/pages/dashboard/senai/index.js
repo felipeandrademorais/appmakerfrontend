@@ -10,6 +10,8 @@ export default class senai extends Component {
 
   state = {
     data: [],
+    dataInfo: {},
+    page: 1,
     param: 'Mundo Senai'
   }
 
@@ -17,18 +19,41 @@ export default class senai extends Component {
     this.loadQuestions();
  }
 
-  loadQuestions = async () => {
+  loadQuestions = async (page = 1) => {
 
     try{
 
       const param = this.state.param;
-      const response = await api.get('/answers', { params: { filter: param }});
-      this.setState({ data: response.data});
+      const response = await api.get(`/answers?page=${page}`, { params: { filter: param }});
+      const { docs, ...dataInfo } = response.data;
+      this.setState({ data: docs, dataInfo, page});
       
     }catch(err){
       console.log(err);
     }
   }
+
+  
+ prevPage = () => {
+  const { page, dataInfo } = this.state;
+
+  if(page === 1) return;
+
+  const pageNumber = page -1;
+
+  this.loadQuestions(pageNumber);
+
+ };
+
+ nextPage = () => {
+   const { page, dataInfo } = this.state;
+
+   if(page === dataInfo.pages) return;
+
+   const pageNumber = page + 1;
+
+   this.loadQuestions(pageNumber);
+ }
 
   render() {
     return (
@@ -50,6 +75,11 @@ export default class senai extends Component {
                     ))}
                   </tbody>
                 </table>
+                <div className="action">
+                  <button onClick={this.prevPage}>Anterior</button>
+                  <span>Página: {this.state.page}</span>
+                  <button onClick={this.nextPage}>Próximo</button>
+              </div>
             </div>
             <div className="senai-chart">
               <h3>Gráfico de Desenpenho</h3>
