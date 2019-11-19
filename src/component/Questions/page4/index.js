@@ -20,7 +20,7 @@ export default class Question4 extends Component {
             <React.Fragment>
                 <div className="container" >
                     <div className="containerText">
-                        <h1>Atendimento equipe Sesi/Senai</h1>
+                        <h1>Como foi o atendimento do Sesi e Senai?</h1>
                     </div>
                     
                     <div className="containerButton">

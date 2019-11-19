@@ -29,13 +29,16 @@ export default class Final extends Component {
            
         } catch (err){
             console.log(err);
-            this.setState({ error: "Ocorreu um erro ao recuperar as respostas." });
+            this.setState({ error: "Ocorreu um erro ao enviar as respostas." });
         }
+
+        setTimeout(() => {this.props.initStep()}, 5000);
     }
 
-    continue = e => {
-        e.preventDefault();
-        this.props.initStep();
+
+
+    continue() {
+        
     }
 
   render() {
@@ -43,13 +46,8 @@ export default class Final extends Component {
         <MuiThemeProvider>
             <React.Fragment>
                 <div className="container" >
-                    {this.state.error ? <h1>Error ao Enviar solicitação</h1> : <h1>Enviado com sucesso!</h1>}
+                    {this.state.error ? <h1>Error ao enviar a resposta</h1> : <h1>Obrigado pela sua participação.</h1>}
                     <br />
-                    <RaisedButton 
-                        label="Recomeçar"
-                        primary={true}
-                        onClick={this.continue}
-                    />
                 </ div>    
             </React.Fragment>
         </MuiThemeProvider>    

@@ -20,7 +20,7 @@ export default class Question3 extends Component {
             <React.Fragment>
                 <div className="container" >
                     <div className="containerText">
-                        <h1>Qualidade dos Protótipos</h1>
+                        <h1>O que achou da qualidade dos nossos protótipos?</h1>
                     </div>
                     
                     <div className="containerButton">
